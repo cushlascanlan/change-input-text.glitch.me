@@ -28,25 +28,45 @@
       const textWrapper = document.getElementById("text-wrapper");
       const textInput = document.getElementById("text-input");
       const words = [
-        
-        "a place",
-        "banana",
-        "fish",
-        "royal"
-        "hello",
-        "once upon a time, there was a",
-        "there we go"
+        "auburn",
+        "black",
+        "crimson",
+        "dandelion yellow",
+        "eggplant",
+        "fuschia",
+        "garnet",
+        "hazel",
+        "ivory",
+        "jungle green",
+        "jupiter",
+        "khaki",
+        "lemon sherbert",
+        "magenta",
+        "navy blue",
+        "orange",
+        "purple",
+        "pluto",
+        "quince",
+        "red",
+        "sand",
+        "tangerine",
+        "ultra violet",
+        "violet",
+        "watermelon",
+        "yellow",
+        "zebra stripes"
       ];
 
       function changeText(e) {
+        const searchWord = e.target.value.toLowerCase().trim();
         const resultWords = words.filter(word =>
-          word.startsWith(e.target.value)
+          word.toLowerCase().startsWith(searchWord)
         );
         // clear exist words
         while (textWrapper.firstChild) {
           textWrapper.removeChild(textWrapper.firstChild);
         }
-        if (e.target.value != "") {
+      if (searchWord != "") {
         for (var i = 0; i < resultWords.length; i++) {
           const line = document.createElement("div");
           line.innerHTML = resultWords[i];
@@ -54,10 +74,12 @@
         }
         if (resultWords.length === 0) {
           const line = document.createElement("div");
-          line.innerHTML = "no results";
+          line.innerHTML = "No results";
           textWrapper.appendChild(line);
-        } 
         }
+      }
+    }
+      
       
       
         
