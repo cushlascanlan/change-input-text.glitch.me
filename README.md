@@ -1,2 +1,3 @@
-# change-input-text.glitch.me
-change text on input exercise
+# Change text on input
+
+An empty webpage for HTML/CSS/JavaScript exercises.
